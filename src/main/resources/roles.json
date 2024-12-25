@@ -1,0 +1,98 @@
+[
+  {
+    "title": "Director",
+    "description": "Oversees the creative aspects of the film."
+  },
+  {
+    "title": "Producer",
+    "description": "Manages the production process."
+  },
+  {
+    "title": "Screenwriter",
+    "description": "Writes the script for the film."
+  },
+  {
+    "title": "Lead Actor",
+    "description": "Plays the protagonist role."
+  },
+  {
+    "title": "Supporting Actor",
+    "description": "Plays a secondary character role."
+  },
+  {
+    "title": "Cinematographer",
+    "description": "Directs the photography and camera work."
+  },
+  {
+    "title": "Editor",
+    "description": "Assembles the film footage."
+  },
+  {
+    "title": "Composer",
+    "description": "Creates the music score for the film."
+  },
+  {
+    "title": "Casting Director",
+    "description": "Chooses the actors for the roles."
+  },
+  {
+    "title": "Production Designer",
+    "description": "Designs the film's set and visuals."
+  },
+  {
+    "title": "Costume Designer",
+    "description": "Designs the clothing and costumes."
+  },
+  {
+    "title": "Makeup Artist",
+    "description": "Handles makeup and hairstyling."
+  },
+  {
+    "title": "Sound Designer",
+    "description": "Creates the sound effects for the film."
+  },
+  {
+    "title": "Stunt Coordinator",
+    "description": "Manages the stunt performances."
+  },
+  {
+    "title": "Art Director",
+    "description": "Supervises the artistic aspects of the film."
+  },
+  {
+    "title": "Assistant Director",
+    "description": "Assists the director in the production."
+  },
+  {
+    "title": "Gaffer",
+    "description": "Manages lighting for the film."
+  },
+  {
+    "title": "Grip",
+    "description": "Handles the film's rigging and equipment."
+  },
+  {
+    "title": "VFX Artist",
+    "description": "Creates the visual effects."
+  },
+  {
+    "title": "Sound Mixer",
+    "description": "Mixes the film's audio tracks."
+  },
+  {
+    "title": "Location Manager",
+    "description": "Finds and manages film locations."
+  },
+  {
+    "title": "Storyboard Artist",
+    "description": "Creates the visual storyboards."
+  },
+  {
+    "title": "Production Manager",
+    "description": "Oversees the film's production budget."
+  },
+  {
+    "title": "Prop Master",
+    "description": "Manages the props used in the film."
+  }
+]
