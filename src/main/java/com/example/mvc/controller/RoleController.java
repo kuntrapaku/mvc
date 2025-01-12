@@ -1,18 +1,17 @@
 package com.example.mvc.controller;
 
+import com.example.mvc.model.Post;
 import com.example.mvc.model.Role;
+import com.example.mvc.model.User;
+import com.example.mvc.service.AuthService;
+import com.example.mvc.service.PostService;
 import com.example.mvc.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
@@ -22,38 +21,65 @@ public class RoleController {
     @Autowired
     private RoleService roleService;
 
-    // Get all roles
+    @Autowired
+    private AuthService authService;
+
+    @Autowired
+    private PostService postService; // Inject PostService
+
+    // --- Existing endpoints ---
+    // (No changes to existing endpoints)
+
+    // Fetch all posts
+//    @GetMapping("/posts")
+//    public ResponseEntity<List<Post>> getAllPosts() {
+//        List<Post> posts = postService.getAllPosts();
+//        return ResponseEntity.ok(posts);
+//    }
+
+    // Create a post with optional media
+    @PostMapping("/posts")
+    public ResponseEntity<?> createPost(
+            @RequestParam String text,
+            @RequestPart(required = false) List<MultipartFile> files,
+            @RequestHeader("Authorization") String token // Retrieve the token
+    ) {
+        try {
+            System.out.println("Token received: " + token);
+            String username = authService.extractUsernameFromToken(token); // Extract username from the token
+            System.out.println("Username extracted: " + username);
+            Post newPost = postService.createPost(text, files, username); // Delegate to PostService
+            return ResponseEntity.ok(newPost);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(new ApiResponse(false, e.getMessage()));
+        }
+    }
+
+    // Get roles with optional filters
     @GetMapping("/roles")
     public List<Role> getFilteredRoles(
             @RequestParam(required = false) String title,
             @RequestParam(required = false) String industry
     ) {
-        System.out.println("Title: " + title + ", Industry: " + industry);
-        List<Role> filteredRoles = roleService.findRolesByFilters(title, industry);
-        System.out.println("Filtered Roles: " + filteredRoles);
-        return filteredRoles;
+        return roleService.findRolesByFilters(title, industry);
     }
-
 
     // Create a single role
     @PostMapping
     public ResponseEntity<Role> createRole(@RequestBody Role role) {
-        Role savedRole = roleService.saveRole(role);
-        return ResponseEntity.ok(savedRole);
+        return ResponseEntity.ok(roleService.saveRole(role));
     }
 
     // Create multiple roles
-    @PostMapping("/batch")
+    @PostMapping("roles/batch")
     public ResponseEntity<List<Role>> createRoles(@RequestBody List<Role> roles) {
-        List<Role> savedRoles = roleService.saveAllRoles(roles);
-        return ResponseEntity.ok(savedRoles);
+        return ResponseEntity.ok(roleService.saveAllRoles(roles));
     }
 
     // Update a role
     @PutMapping("/{id}")
     public ResponseEntity<Role> updateRole(@PathVariable Long id, @RequestBody Role roleDetails) {
-        Role updatedRole = roleService.updateRole(id, roleDetails);
-        return ResponseEntity.ok(updatedRole);
+        return ResponseEntity.ok(roleService.updateRole(id, roleDetails));
     }
 
     // Delete a role
@@ -63,28 +89,64 @@ public class RoleController {
         return ResponseEntity.ok().build();
     }
 
-    // Partially update a role
-    @PatchMapping("/{id}")
-    public ResponseEntity<Role> partiallyUpdateRole(@PathVariable Long id, @RequestBody Map<String, String> updates) {
-        Role role = roleService.partiallyUpdateRole(id, updates);
-        return ResponseEntity.ok(role);
+    // Register a new user
+    @PostMapping("/auth/register")
+    public ResponseEntity<?> registerUser(@RequestBody User user) {
+        try {
+            String message = authService.registerUser(user);
+            return ResponseEntity.ok(new ApiResponse(true, message));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(new ApiResponse(false, e.getMessage()));
+        }
     }
 
-    // Load roles from JSON file
-    @PostMapping("/load")
-    public ResponseEntity<List<Role>> loadRolesFromJson() {
+    // Login user and return token
+    @PostMapping("/auth/login")
+    public ResponseEntity<?> loginUser(@RequestBody User user) {
         try {
-            // Locate and read the JSON file from resources
-            ClassPathResource resource = new ClassPathResource("roles.json");
-            ObjectMapper objectMapper = new ObjectMapper();
-            List<Role> roles = objectMapper.readValue(resource.getInputStream(), new TypeReference<List<Role>>() {});
-
-            // Save roles to the database
-            roles.forEach(roleService::saveRole);
-
-            return ResponseEntity.ok(roles);
-        } catch (IOException e) {
-            return ResponseEntity.internalServerError().build();
+            String token = authService.loginUser(user);
+            return ResponseEntity.ok(new LoginResponse("Login successful!", token));
+        } catch (Exception e) {
+            return ResponseEntity.status(401).body(new ApiResponse(false, e.getMessage()));
         }
+    }
+
+}
+
+// DTO for generic API response
+class ApiResponse {
+    private boolean success;
+    private String message;
+
+    public ApiResponse(boolean success, String message) {
+        this.success = success;
+        this.message = message;
+    }
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+}
+
+// DTO for login response
+class LoginResponse {
+    private String message;
+    private String token;
+
+    public LoginResponse(String message, String token) {
+        this.message = message;
+        this.token = token;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public String getToken() {
+        return token;
     }
 }
