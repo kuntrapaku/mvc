@@ -15,7 +15,8 @@ public class Post {
     @ElementCollection
     private List<String> mediaUrls; // Store URLs for media files
 
-    private String user; // Username of the user who created the post
+    @Column(name = "username") // Rename the column to "username" in the database
+    private String username; // Username of the user who created the post
 
     // Getters and Setters
     public Long getId() {
@@ -42,11 +43,11 @@ public class Post {
         this.mediaUrls = mediaUrls;
     }
 
-    public String getUser() {
-        return user;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

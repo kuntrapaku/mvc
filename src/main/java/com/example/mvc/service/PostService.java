@@ -19,22 +19,34 @@ public class PostService {
     private FileStorageService fileStorageService; // For handling file uploads
 
     // Create a new post
+    // Create a new post
+    // Create a new post
     public Post createPost(String text, List<MultipartFile> files, String username) {
         Post post = new Post();
         post.setText(text);
-        post.setUser(username);
+        post.setUsername(username);
 
         List<String> mediaUrls = new ArrayList<>();
-        if (files != null) {
+
+        if (files != null && !files.isEmpty()) {
             for (MultipartFile file : files) {
-                String url = fileStorageService.storeFile(file); // Save file and get URL
-                mediaUrls.add(url);
+                try {
+                    System.out.println("Processing file: " + file.getOriginalFilename()); // Debugging log
+                    String url = fileStorageService.storeFile(file); // Save file and get URL
+                    mediaUrls.add(url);
+                } catch (Exception e) {
+                    System.err.println("Error storing file: " + file.getOriginalFilename() + " - " + e.getMessage());
+                    throw new RuntimeException("Failed to store file: " + file.getOriginalFilename());
+                }
             }
         }
 
         post.setMediaUrls(mediaUrls);
-        return postRepository.save(post);
+
+        // Save the post to the database (assuming there's a repository)
+        return postRepository.save(post); // Ensure postRepository is properly injected
     }
+
 
     // Fetch all posts
     public List<Post> getAllPosts() {

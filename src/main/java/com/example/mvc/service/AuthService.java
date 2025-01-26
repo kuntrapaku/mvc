@@ -7,9 +7,9 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 
 import javax.crypto.SecretKey;
 import java.util.Date;
@@ -17,15 +17,23 @@ import java.util.Date;
 @Service
 public class AuthService {
 
-    // Generate a secure secret key
-    private static final SecretKey SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS256);
-    private static final long EXPIRATION_TIME = 86400000; // 1 day in milliseconds
+    // Use a shared secret key from configuration to ensure consistency
+    private final SecretKey SECRET_KEY;
+    private final long EXPIRATION_TIME;
 
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+
+    // Constructor to inject secret key and expiration time
+    public AuthService(
+            @Value("${jwt.secret}") String secretKey,
+            @Value("${jwt.expiration}") long expirationTime) {
+        this.SECRET_KEY = Keys.hmacShaKeyFor(secretKey.getBytes()); // Generate a secure key from the shared secret
+        this.EXPIRATION_TIME = expirationTime; // Set expiration time from properties
+    }
 
     /**
      * Register a new user
@@ -79,7 +87,7 @@ public class AuthService {
                 .setSubject(username)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME)) // Token validity
-                .signWith(SECRET_KEY) // Use the secure key
+                .signWith(SECRET_KEY) // Use the shared secret key
                 .compact();
     }
 
@@ -90,22 +98,34 @@ public class AuthService {
      * @return Claims extracted from the token
      */
     public Claims validateToken(String token) {
-        return Jwts.parserBuilder()
-                .setSigningKey(SECRET_KEY) // Use the same secure key
+        try {
+            return Jwts.parserBuilder()
+                    .setSigningKey(SECRET_KEY) // Use the shared secret key
+                    .build()
+                    .parseClaimsJws(token)
+                    .getBody();
+        } catch (Exception e) {
+            throw new RuntimeException("Invalid or expired token: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Extract username from a JWT token
+     *
+     * @param token The JWT token
+     * @return The username extracted from the token
+     */
+    public String extractUsernameFromToken(String token) {
+        if (token.startsWith("Bearer ")) {
+            token = token.substring(7); // Remove "Bearer " prefix
+        }
+
+        Claims claims = Jwts.parserBuilder()
+                .setSigningKey(SECRET_KEY) // Use the shared secret key
                 .build()
                 .parseClaimsJws(token)
                 .getBody();
-    }
-    public String extractUsernameFromToken(String token) {
-        if (token.startsWith("Bearer")) {
-            token = token.substring(7);
-        }
 
-        Claims claims = Jwts.parser()
-                .setSigningKey("MySuperSecretJWTKey123456789!") // Your secret key
-                .parseClaimsJws(token)
-                .getBody();
-
-        return claims.getSubject();
+        return claims.getSubject(); // Return the username (subject)
     }
 }

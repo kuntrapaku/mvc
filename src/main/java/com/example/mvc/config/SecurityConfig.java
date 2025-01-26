@@ -39,8 +39,6 @@ public class SecurityConfig {
                         .requestMatchers(
                                 "/api/auth/register",
                                 "/api/auth/login",
-                                "/api/role/batch",
-                                "/api/posts",
                                 "/h2-console/**"
                         ).permitAll()
                         .anyRequest().authenticated()

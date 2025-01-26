@@ -1,17 +1,26 @@
 package com.example.mvc.controller;
 
+import com.example.mvc.dto.ApiResponse;
+import com.example.mvc.dto.LoginResponse;
+import com.example.mvc.dto.UserDTO;
+import com.example.mvc.model.ConnectionRequest;
 import com.example.mvc.model.Post;
 import com.example.mvc.model.Role;
 import com.example.mvc.model.User;
+import com.example.mvc.repository.ConnectionRequestRepository;
 import com.example.mvc.service.AuthService;
 import com.example.mvc.service.PostService;
 import com.example.mvc.service.RoleService;
+import com.example.mvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
@@ -26,6 +35,13 @@ public class RoleController {
 
     @Autowired
     private PostService postService; // Inject PostService
+
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private ConnectionRequestRepository connectionRequestRepository;
+
 
     // --- Existing endpoints ---
     // (No changes to existing endpoints)
@@ -110,43 +126,121 @@ public class RoleController {
             return ResponseEntity.status(401).body(new ApiResponse(false, e.getMessage()));
         }
     }
+    // Search users by query (username)
 
-}
 
-// DTO for generic API response
-class ApiResponse {
-    private boolean success;
-    private String message;
 
-    public ApiResponse(boolean success, String message) {
-        this.success = success;
-        this.message = message;
+    @GetMapping("/search")
+    public ResponseEntity<List<UserDTO>> searchUsers(
+            @RequestParam String query,
+            @RequestHeader("Authorization") String token) {
+        String username = authService.extractUsernameFromToken(token);
+        if (username == null) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
+        }
+
+        List<User> users = userService.searchUsers(query);
+        List<UserDTO> userDTOs = users.stream()
+                .map(user -> new UserDTO(user.getId(), user.getUsername(), user.getFullName(), user.getProfilePictureUrl()))
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(userDTOs);
     }
 
-    public boolean isSuccess() {
-        return success;
+
+    // Get user by ID
+    @GetMapping("/users/{id}")
+    public ResponseEntity<User> getUserById(@PathVariable Long id) {
+        return ResponseEntity.ok(userService.getUserById(id));
+    }
+    // Send connection request
+    // Send a connection request
+    @PostMapping("/connections/send")
+    public ResponseEntity<?> sendConnectionRequest(
+            @RequestParam Long recipientId,
+            @RequestHeader("Authorization") String token) {
+        try {
+            String senderUsername = authService.extractUsernameFromToken(token);
+            userService.sendConnectionRequest(senderUsername, recipientId);
+            return ResponseEntity.ok(new ApiResponse(true, "Connection request sent successfully"));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse(false, e.getMessage()));
+        }
     }
 
-    public String getMessage() {
-        return message;
-    }
-}
-
-// DTO for login response
-class LoginResponse {
-    private String message;
-    private String token;
-
-    public LoginResponse(String message, String token) {
-        this.message = message;
-        this.token = token;
+    // Get pending connection requests for logged-in user
+    @GetMapping("/connections/requests")
+    public ResponseEntity<List<ConnectionRequest>> getPendingRequests(
+            @RequestHeader("Authorization") String token) {
+        String username = authService.extractUsernameFromToken(token);
+        if (username == null) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
+        }
+        List<ConnectionRequest> requests = userService.getPendingRequests(username);
+        return ResponseEntity.ok(requests);
     }
 
-    public String getMessage() {
-        return message;
+    // Accept a connection request
+    @PostMapping("/connections/accept/{requestId}")
+    public ResponseEntity<?> acceptConnectionRequest(
+            @PathVariable Long requestId,
+            @RequestHeader("Authorization") String token) {
+        String username = authService.extractUsernameFromToken(token);
+        if (username == null) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(new ApiResponse<>(false, "Unauthorized"));
+        }
+
+        // Accept the connection and get recipient's name
+        ConnectionRequest acceptedRequest = userService.acceptConnection(requestId);
+
+        User sender = acceptedRequest.getSender();
+        User recipient = acceptedRequest.getRecipient();
+
+        // Determine which user is the current user
+        User connectedUser = sender.getUsername().equals(username) ? recipient : sender;
+
+        // Prepare DTO for response
+        UserDTO connectedUserDTO = new UserDTO(
+                connectedUser.getId(),
+                connectedUser.getUsername(),
+                connectedUser.getFullName(),
+                connectedUser.getProfilePictureUrl()
+        );
+
+        return ResponseEntity.ok(new ApiResponse<>(true, connectedUserDTO.getUsername() + " is now a connection.", connectedUserDTO));
+    }
+    @GetMapping("/connections")
+    public ResponseEntity<List<UserDTO>> getConnections(@RequestHeader("Authorization") String token) {
+        String username = authService.extractUsernameFromToken(token);
+        User user = userService.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        List<ConnectionRequest> acceptedConnections = connectionRequestRepository.findByRecipientAndStatus(user, "ACCEPTED");
+
+        List<UserDTO> userDTOs = acceptedConnections.stream()
+                .map(request -> new UserDTO(
+                        request.getSender().getId(),
+                        request.getSender().getUsername(),
+                        request.getSender().getFullName(),
+                        request.getSender().getProfilePictureUrl()
+                )).collect(Collectors.toList());
+
+        return ResponseEntity.ok(userDTOs);
     }
 
-    public String getToken() {
-        return token;
+
+    // Ignore a connection request
+    @PostMapping("/connections/ignore")
+    public ResponseEntity<?> ignoreConnectionRequest(
+            @RequestParam Long requestId,
+            @RequestHeader("Authorization") String token) {
+        String username = authService.extractUsernameFromToken(token);
+        if (username == null) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(new ApiResponse(false, "Unauthorized"));
+        }
+        userService.ignoreConnection(requestId);
+        return ResponseEntity.ok(new ApiResponse(true, "Connection request ignored"));
     }
+
+
 }
