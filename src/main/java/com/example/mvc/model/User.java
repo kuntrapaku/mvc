@@ -2,6 +2,7 @@ package com.example.mvc.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.Hibernate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,7 +24,6 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    // Many-to-Many relationship to store user connections
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "user_connections",
@@ -32,7 +32,13 @@ public class User {
     )
     private Set<User> connections = new HashSet<>();
 
-    // Getter and setter for connections
+    // Explicit initialization method
+    public void initializeConnections() {
+        if (!Hibernate.isInitialized(this.connections)) {
+            Hibernate.initialize(this.connections);
+        }
+    }
+
     public Set<User> getConnections() {
         return connections;
     }
@@ -41,10 +47,19 @@ public class User {
         this.connections = connections;
     }
 
-    // Default constructor
     public User() {
+        this.connections = new HashSet<>();
     }
 
+    public User(String username, String fullName, String profilePictureUrl, String password) {
+        this.username = username;
+        this.fullName = fullName;
+        this.profilePictureUrl = profilePictureUrl;
+        this.password = password;
+        this.connections = new HashSet<>();
+    }
+
+    // Keep existing getters/setters below (unchanged)
     public Long getId() {
         return id;
     }
@@ -82,13 +97,6 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public User(String username, String fullName, String profilePictureUrl, String password) {
-        this.username = username;
-        this.fullName = fullName;
-        this.profilePictureUrl = profilePictureUrl;
         this.password = password;
     }
 }

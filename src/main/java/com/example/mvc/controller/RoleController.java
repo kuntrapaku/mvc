@@ -160,27 +160,60 @@ public class RoleController {
             @RequestParam Long recipientId,
             @RequestHeader("Authorization") String token) {
         try {
+            System.out.println("Recipient ID received: " + recipientId);
             String senderUsername = authService.extractUsernameFromToken(token);
             userService.sendConnectionRequest(senderUsername, recipientId);
             return ResponseEntity.ok(new ApiResponse(true, "Connection request sent successfully"));
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse(false, e.getMessage()));
         }
     }
 
     // Get pending connection requests for logged-in user
     @GetMapping("/connections/requests")
-    public ResponseEntity<List<ConnectionRequest>> getPendingRequests(
-            @RequestHeader("Authorization") String token) {
+    public ResponseEntity<?> getPendingRequests(@RequestHeader("Authorization") String token) {
+        // Extract the currently logged-in user's username (recipient: 'ayaan' who should see invitations)
         String username = authService.extractUsernameFromToken(token);
         if (username == null) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Unauthorized access");
         }
-        List<ConnectionRequest> requests = userService.getPendingRequests(username);
-        return ResponseEntity.ok(requests);
+
+        System.out.println("Logged-in user checking invitations: " + username);
+
+        try {
+            // Find the logged-in user (recipient who should see the invitations)
+            User recipient = userService.findByUsername(username)
+                    .orElseThrow(() -> new RuntimeException("Recipient user not found"));
+
+            // Fetch pending connection requests where the recipient is the logged-in user
+            List<ConnectionRequest> requests = userService.getPendingRequests(recipient);
+
+            if (requests.isEmpty()) {
+                return ResponseEntity.ok(Collections.emptyList());  // Return empty list instead of a string message
+            }
+
+            // Convert requests to DTOs for cleaner frontend consumption
+            List<UserDTO> pendingRequests = requests.stream()
+                    .map(req -> new UserDTO(
+                            req.getSender().getId(),
+                            req.getSender().getUsername(),
+                            req.getSender().getFullName(),
+                            req.getSender().getProfilePictureUrl()
+                    ))
+                    .collect(Collectors.toList());
+
+            return ResponseEntity.ok(pendingRequests);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error retrieving connection requests: " + e.getMessage());
+        }
     }
 
     // Accept a connection request
+
     @PostMapping("/connections/accept/{requestId}")
     public ResponseEntity<?> acceptConnectionRequest(
             @PathVariable Long requestId,
