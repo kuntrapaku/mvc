@@ -12,6 +12,10 @@ public class Post {
 
     private String text;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+
     @ElementCollection
     private List<String> mediaUrls; // Store URLs for media files
 
@@ -21,6 +25,14 @@ public class Post {
     // Getters and Setters
     public Long getId() {
         return id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public void setId(Long id) {

@@ -1,6 +1,7 @@
 package com.example.mvc.service;
 
 import com.example.mvc.model.Post;
+import com.example.mvc.model.User;
 import com.example.mvc.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,8 @@ public class PostService {
 
     @Autowired
     private PostRepository postRepository;
+    @Autowired
+    private  UserService userRepository;
 
     @Autowired
     private FileStorageService fileStorageService; // For handling file uploads
@@ -46,6 +49,13 @@ public class PostService {
         // Save the post to the database (assuming there's a repository)
         return postRepository.save(post); // Ensure postRepository is properly injected
     }
+    public List<Post> getPostsByUsername(String username) {
+
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        return postRepository.findByUser(user);
+    }
+
 
 
     // Fetch all posts

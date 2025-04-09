@@ -18,6 +18,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -245,22 +246,28 @@ public class RoleController {
     @GetMapping("/connections")
     public ResponseEntity<List<UserDTO>> getConnections(@RequestHeader("Authorization") String token) {
         String username = authService.extractUsernameFromToken(token);
-        User user = userService.findByUsername(username)
+        User currentUser = userService.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
-        List<ConnectionRequest> acceptedConnections = connectionRequestRepository.findByRecipientAndStatus(user, "ACCEPTED");
+        // Fetch connections where the user is either sender or recipient
+        List<ConnectionRequest> sent = connectionRequestRepository.findBySenderAndStatus(currentUser, "ACCEPTED");
+        List<ConnectionRequest> received = connectionRequestRepository.findByRecipientAndStatus(currentUser, "ACCEPTED");
 
-        List<UserDTO> userDTOs = acceptedConnections.stream()
-                .map(request -> new UserDTO(
-                        request.getSender().getId(),
-                        request.getSender().getUsername(),
-                        request.getSender().getFullName(),
-                        request.getSender().getProfilePictureUrl()
-                )).collect(Collectors.toList());
+        // Combine both and map the other user (not current user) to DTO
+        List<UserDTO> connections = new ArrayList<>();
 
-        return ResponseEntity.ok(userDTOs);
+        for (ConnectionRequest req : sent) {
+            User other = req.getRecipient();
+            connections.add(new UserDTO(other.getId(), other.getUsername(), other.getFullName(), other.getProfilePictureUrl()));
+        }
+
+        for (ConnectionRequest req : received) {
+            User other = req.getSender();
+            connections.add(new UserDTO(other.getId(), other.getUsername(), other.getFullName(), other.getProfilePictureUrl()));
+        }
+
+        return ResponseEntity.ok(connections);
     }
-
 
     // Ignore a connection request
     @PostMapping("/connections/ignore")
@@ -274,6 +281,23 @@ public class RoleController {
         userService.ignoreConnection(requestId);
         return ResponseEntity.ok(new ApiResponse(true, "Connection request ignored"));
     }
+
+    @GetMapping("/users/username/{username}")
+    public ResponseEntity<UserDTO> getUserByUsername(@PathVariable String username) {
+        User user = userService.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        UserDTO dto = new UserDTO(user.getId(), user.getUsername(), user.getFullName(), user.getProfilePictureUrl());
+        dto.setBio(user.getBio()); // Add this field if you have it
+        dto.setLocation(user.getLocation()); // Optional
+        return ResponseEntity.ok(dto);
+    }
+    @GetMapping("/posts/user/{username}")
+    public ResponseEntity<List<Post>> getPostsByUser(@PathVariable String username) {
+        List<Post> userPosts = postService.getPostsByUsername(username);
+        return ResponseEntity.ok(userPosts);
+    }
+
+
 
 
 }

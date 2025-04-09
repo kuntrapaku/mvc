@@ -5,7 +5,10 @@ public class UserDTO {
     private String username;
     private String fullName;
     private String profilePictureUrl;
+    private String bio;
+    private String location;
 
+    // Constructor (without bio and location)
     public UserDTO(Long id, String username, String fullName, String profilePictureUrl) {
         this.id = id;
         this.username = username;
@@ -13,7 +16,8 @@ public class UserDTO {
         this.profilePictureUrl = profilePictureUrl;
     }
 
-    // Getters and Setters
+    // === Getters and Setters ===
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -25,4 +29,10 @@ public class UserDTO {
 
     public String getProfilePictureUrl() { return profilePictureUrl; }
     public void setProfilePictureUrl(String profilePictureUrl) { this.profilePictureUrl = profilePictureUrl; }
+
+    public String getBio() { return bio; }
+    public void setBio(String bio) { this.bio = bio; }
+
+    public String getLocation() { return location; }
+    public void setLocation(String location) { this.location = location; }
 }

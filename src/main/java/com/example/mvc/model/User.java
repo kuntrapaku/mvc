@@ -20,6 +20,9 @@ public class User {
 
     private String fullName;
     private String profilePictureUrl;
+    private String bio;
+    private String location;
+
 
     @Column(nullable = false)
     private String password;
@@ -49,6 +52,22 @@ public class User {
 
     public User() {
         this.connections = new HashSet<>();
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public User(String username, String fullName, String profilePictureUrl, String password) {
