@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;
 import java.util.Date;
+import java.util.Optional;
 
 @Service
 public class AuthService {
@@ -128,4 +129,13 @@ public class AuthService {
 
         return claims.getSubject(); // Return the username (subject)
     }
+    public User findUserByUsername(String username) throws Exception {
+        Optional<User> userOpt = userRepository.findByUsername(username);
+        if (userOpt.isPresent()) {
+            return userOpt.get();
+        } else {
+            throw new Exception("Invalid Username or Password");
+        }
+    }
+
 }

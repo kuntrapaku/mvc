@@ -5,12 +5,15 @@ import com.example.mvc.model.User;
 import com.example.mvc.repository.ConnectionRequestRepository;
 import com.example.mvc.repository.UserRepository;
 import jakarta.transaction.Transactional;
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @Service
 public class UserService {
@@ -27,6 +30,7 @@ public class UserService {
 
     // Search users by username
     public List<User> searchUsers(String query) {
+
         return userRepository.findByUsernameContainingIgnoreCase(query);
     }
 
@@ -34,6 +38,13 @@ public class UserService {
     public User getUserById(Long id) {
         return userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found"));
+    }
+    public User getUserById1(Long id)
+    {
+       Optional<User> optionaluser=  userRepository.findById(id);
+       optionaluser.ifPresent(ou-> System.out.println(ou.getFullName()));
+       return optionaluser.orElseThrow(()-> new RuntimeException("user not found"));
+
     }
 
     // Send connection request with validation checks
@@ -71,33 +82,42 @@ public class UserService {
         return requests;
     }
     // Accept connection request
-    @Transactional // Add this annotation
+    @Transactional
     public ConnectionRequest acceptConnection(Long requestId) {
         ConnectionRequest request = connectionRequestRepository.findById(requestId)
                 .orElseThrow(() -> new RuntimeException("Request not found"));
 
-        request.setStatus("ACCEPTED");
+        System.out.println("✅ Found connection request for ID: " + requestId);
 
         User sender = request.getSender();
         User recipient = request.getRecipient();
 
-        // Inside acceptConnectionRequest() after getting sender/recipient
-        sender.initializeConnections();
-        recipient.initializeConnections();
+        if (sender == null || recipient == null) {
+            throw new RuntimeException("❌ Sender or recipient is null");
+        }
 
-        System.out.println("Sender Connections: " + sender.getConnections().size());
-        System.out.println("Recipient Connections: " + recipient.getConnections().size());
+        System.out.println("👤 Sender: " + sender.getUsername());
+        System.out.println("👤 Recipient: " + recipient.getUsername());
 
-        // Add bidirectional connections
+        // Initialize connections if needed
+     //   sender.initializeConnections();
+     //   recipient.initializeConnections();
+
+        Hibernate.initialize(sender.getConnections());
+        Hibernate.initialize(recipient.getConnections());
+
+
+        // Add connection both ways
         sender.getConnections().add(recipient);
         recipient.getConnections().add(sender);
 
-        // Save changes
         userRepository.save(sender);
         userRepository.save(recipient);
 
+        request.setStatus("ACCEPTED");
         return connectionRequestRepository.save(request);
     }
+
     // Ignore connection request
     public void ignoreConnection(Long requestId) {
         connectionRequestRepository.deleteById(requestId);

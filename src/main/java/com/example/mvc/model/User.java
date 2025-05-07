@@ -18,14 +18,13 @@ public class User {
     @Column(unique = true, nullable = false)
     private String username;
 
+    @Column(nullable = false)
+    private String password;
+
     private String fullName;
     private String profilePictureUrl;
     private String bio;
     private String location;
-
-
-    @Column(nullable = false)
-    private String password;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
@@ -35,39 +34,9 @@ public class User {
     )
     private Set<User> connections = new HashSet<>();
 
-    // Explicit initialization method
-    public void initializeConnections() {
-        if (!Hibernate.isInitialized(this.connections)) {
-            Hibernate.initialize(this.connections);
-        }
-    }
-
-    public Set<User> getConnections() {
-        return connections;
-    }
-
-    public void setConnections(Set<User> connections) {
-        this.connections = connections;
-    }
-
+    // Constructors
     public User() {
         this.connections = new HashSet<>();
-    }
-
-    public String getBio() {
-        return bio;
-    }
-
-    public void setBio(String bio) {
-        this.bio = bio;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
     }
 
     public User(String username, String fullName, String profilePictureUrl, String password) {
@@ -78,7 +47,14 @@ public class User {
         this.connections = new HashSet<>();
     }
 
-    // Keep existing getters/setters below (unchanged)
+    // Initialize connections to avoid lazy loading issues
+    public void initializeConnections() {
+        if (!Hibernate.isInitialized(this.connections)) {
+            Hibernate.initialize(this.connections);
+        }
+    }
+
+    // Getter and Setter methods
     public Long getId() {
         return id;
     }
@@ -117,5 +93,29 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public Set<User> getConnections() {
+        return connections;
+    }
+
+    public void setConnections(Set<User> connections) {
+        this.connections = connections;
     }
 }

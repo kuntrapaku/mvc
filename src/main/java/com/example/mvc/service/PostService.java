@@ -49,6 +49,7 @@ public class PostService {
         // Save the post to the database (assuming there's a repository)
         return postRepository.save(post); // Ensure postRepository is properly injected
     }
+
     public List<Post> getPostsByUsername(String username) {
 
         User user = userRepository.findByUsername(username)

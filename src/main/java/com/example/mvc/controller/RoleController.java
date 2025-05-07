@@ -1,7 +1,7 @@
 package com.example.mvc.controller;
 
 import com.example.mvc.dto.ApiResponse;
-import com.example.mvc.dto.LoginResponse;
+import com.example.mvc.payload.response.ExtendedLoginResponse;
 import com.example.mvc.dto.UserDTO;
 import com.example.mvc.model.ConnectionRequest;
 import com.example.mvc.model.Post;
@@ -119,17 +119,38 @@ public class RoleController {
 
     // Login user and return token
     @PostMapping("/auth/login")
-    public ResponseEntity<?> loginUser(@RequestBody User user) {
+    public ResponseEntity<?> loginUser(@RequestBody User loginRequest) {
         try {
-            String token = authService.loginUser(user);
-            return ResponseEntity.ok(new LoginResponse("Login successful!", token));
+            String token = authService.loginUser(loginRequest);
+
+            User loggedInUser = authService.findUserByUsername(loginRequest.getUsername());
+
+            ExtendedLoginResponse response = new ExtendedLoginResponse(
+                    loggedInUser.getId(),
+                    loggedInUser.getFullName(), // ✅ use fullName
+                    token
+            );
+
+            return ResponseEntity.ok(response);
+
         } catch (Exception e) {
             return ResponseEntity.status(401).body(new ApiResponse(false, e.getMessage()));
         }
     }
+
     // Search users by query (username)
 
-
+    @PostMapping("/auth/signup")
+    public ResponseEntity<?> signupUser(@RequestBody User user)
+    {
+        try {
+            String message= authService.registerUser(user);
+            return ResponseEntity.ok(new ApiResponse<>(true,message));
+        }catch (Exception e)
+        {
+            return ResponseEntity.status(401).body(new ApiResponse(false,e.getMessage()));
+        }
+    }
 
     @GetMapping("/search")
     public ResponseEntity<List<UserDTO>> searchUsers(
@@ -219,6 +240,9 @@ public class RoleController {
     public ResponseEntity<?> acceptConnectionRequest(
             @PathVariable Long requestId,
             @RequestHeader("Authorization") String token) {
+        System.out.println("🔥 Received request to accept connection: " + requestId);
+        System.out.println("🔑 Token received: " + token);
+
         String username = authService.extractUsernameFromToken(token);
         if (username == null) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(new ApiResponse<>(false, "Unauthorized"));

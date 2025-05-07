@@ -8,6 +8,7 @@ public class UserDTO {
     private String bio;
     private String location;
 
+
     // Constructor (without bio and location)
     public UserDTO(Long id, String username, String fullName, String profilePictureUrl) {
         this.id = id;
