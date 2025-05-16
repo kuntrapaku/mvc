@@ -1,6 +1,7 @@
 package com.example.mvc.controller;
 
 import com.example.mvc.dto.ApiResponse;
+import com.example.mvc.dto.ConnectionRequestDTO;
 import com.example.mvc.payload.response.ExtendedLoginResponse;
 import com.example.mvc.dto.UserDTO;
 import com.example.mvc.model.ConnectionRequest;
@@ -25,7 +26,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5000")
+//@CrossOrigin(origins = "http://localhost:5000")
 public class RoleController {
 
     @Autowired
@@ -195,43 +196,23 @@ public class RoleController {
     // Get pending connection requests for logged-in user
     @GetMapping("/connections/requests")
     public ResponseEntity<?> getPendingRequests(@RequestHeader("Authorization") String token) {
-        // Extract the currently logged-in user's username (recipient: 'ayaan' who should see invitations)
         String username = authService.extractUsernameFromToken(token);
-        if (username == null) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Unauthorized access");
-        }
+        User recipient = userService.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("Recipient user not found"));
 
-        System.out.println("Logged-in user checking invitations: " + username);
+        List<ConnectionRequest> requests = userService.getPendingRequests(recipient);
 
-        try {
-            // Find the logged-in user (recipient who should see the invitations)
-            User recipient = userService.findByUsername(username)
-                    .orElseThrow(() -> new RuntimeException("Recipient user not found"));
+        List<ConnectionRequestDTO> pendingRequests = requests.stream()
+                .map(req -> new ConnectionRequestDTO(
+                        req.getId(),  // ConnectionRequest ID
+                        req.getSender().getId(),
+                        req.getSender().getUsername(),
+                        req.getSender().getFullName(),
+                        req.getSender().getProfilePictureUrl()
+                ))
+                .collect(Collectors.toList());
 
-            // Fetch pending connection requests where the recipient is the logged-in user
-            List<ConnectionRequest> requests = userService.getPendingRequests(recipient);
-
-            if (requests.isEmpty()) {
-                return ResponseEntity.ok(Collections.emptyList());  // Return empty list instead of a string message
-            }
-
-            // Convert requests to DTOs for cleaner frontend consumption
-            List<UserDTO> pendingRequests = requests.stream()
-                    .map(req -> new UserDTO(
-                            req.getSender().getId(),
-                            req.getSender().getUsername(),
-                            req.getSender().getFullName(),
-                            req.getSender().getProfilePictureUrl()
-                    ))
-                    .collect(Collectors.toList());
-
-            return ResponseEntity.ok(pendingRequests);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Error retrieving connection requests: " + e.getMessage());
-        }
+        return ResponseEntity.ok(pendingRequests);
     }
 
     // Accept a connection request

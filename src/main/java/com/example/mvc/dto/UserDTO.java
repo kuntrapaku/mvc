@@ -8,8 +8,6 @@ public class UserDTO {
     private String bio;
     private String location;
 
-
-    // Constructor (without bio and location)
     public UserDTO(Long id, String username, String fullName, String profilePictureUrl) {
         this.id = id;
         this.username = username;
@@ -17,7 +15,7 @@ public class UserDTO {
         this.profilePictureUrl = profilePictureUrl;
     }
 
-    // === Getters and Setters ===
+    // Getters and Setters
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }

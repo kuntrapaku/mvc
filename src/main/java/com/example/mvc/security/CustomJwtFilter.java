@@ -32,9 +32,19 @@ public class CustomJwtFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
+        String path = httpRequest.getRequestURI();
+        System.out.println("[DEBUG] JWT Filter - Path: " + path);
+
+        // ✅ Allow unauthenticated access to the AI endpoint
+        if (path != null && path.contains("/api/chat/ask")) {
+            System.out.println("[DEBUG] Skipping JWT for /api/chat/ask");
+            chain.doFilter(request, response);
+            return;
+        }
+
         try {
             String token = getJwtFromRequest(httpRequest);
-
+            System.out.println("[DEBUG] JWT token = " + token);
 
             if (StringUtils.hasText(token) && jwtTokenProvider.validateToken(token)) {
                 String username = jwtTokenProvider.getUsernameFromJwt(token);
