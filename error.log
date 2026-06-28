@@ -1,0 +1,1364 @@
+2025-05-11 11:00:45 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+11:00:30.548 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:00:30.769 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-11T11:00:31.808+01:00  INFO 25204 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 25204 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-11T11:00:31.811+01:00  INFO 25204 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T11:00:33.254+01:00  INFO 25204 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T11:00:33.412+01:00  INFO 25204 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 4 JPA repository interfaces.
+2025-05-11T11:00:34.540+01:00  INFO 25204 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T11:00:34.709+01:00  INFO 25204 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-11T11:00:34.819+01:00  INFO 25204 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T11:00:35.623+01:00  INFO 25204 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T11:00:35.689+01:00  INFO 25204 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T11:00:36.473+01:00  INFO 25204 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6248cfab
+2025-05-11T11:00:36.477+01:00  INFO 25204 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T11:00:36.589+01:00  WARN 25204 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-11T11:00:36.638+01:00  INFO 25204 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T11:00:38.539+01:00  INFO 25204 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T11:00:38.748+01:00  INFO 25204 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T11:00:39.967+01:00  INFO 25204 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T11:00:40.767+01:00 DEBUG 25204 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-11T11:00:41.560+01:00  INFO 25204 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 10.435 seconds (process running for 12.42)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.26 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.023 s
+[INFO] Finished at: 2025-05-11T11:00:45+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-11 11:01:39 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+11:01:08.948 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:01:09.174 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-11T11:01:10.146+01:00  INFO 29728 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 29728 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-11T11:01:10.150+01:00  INFO 29728 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T11:01:11.805+01:00  INFO 29728 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T11:01:11.979+01:00  INFO 29728 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 4 JPA repository interfaces.
+2025-05-11T11:01:13.204+01:00  INFO 29728 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T11:01:13.402+01:00  INFO 29728 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-11T11:01:13.510+01:00  INFO 29728 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T11:01:14.278+01:00  INFO 29728 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T11:01:14.371+01:00  INFO 29728 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T11:01:15.237+01:00  INFO 29728 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31d4b3e8
+2025-05-11T11:01:15.241+01:00  INFO 29728 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T11:01:15.340+01:00  WARN 29728 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-11T11:01:15.405+01:00  INFO 29728 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T11:01:19.312+01:00  INFO 29728 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T11:01:19.596+01:00  INFO 29728 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T11:01:27.066+01:00  INFO 29728 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T11:01:29.750+01:00 DEBUG 29728 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-11T11:01:35.071+01:00  INFO 29728 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 25.545 seconds (process running for 27.488)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.76 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  51.066 s
+[INFO] Finished at: 2025-05-11T11:01:38+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-11 11:02:06 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+11:01:52.902 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:01:53.105 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-11T11:01:54.035+01:00  INFO 1632 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 1632 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-11T11:01:54.039+01:00  INFO 1632 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T11:01:55.330+01:00  INFO 1632 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T11:01:55.470+01:00  INFO 1632 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 4 JPA repository interfaces.
+2025-05-11T11:01:56.470+01:00  INFO 1632 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T11:01:56.614+01:00  INFO 1632 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-11T11:01:56.684+01:00  INFO 1632 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T11:01:57.367+01:00  INFO 1632 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T11:01:57.430+01:00  INFO 1632 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T11:01:58.256+01:00  INFO 1632 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@483b7dc4
+2025-05-11T11:01:58.262+01:00  INFO 1632 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T11:01:58.323+01:00  WARN 1632 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-11T11:01:58.357+01:00  INFO 1632 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T11:02:00.228+01:00  INFO 1632 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T11:02:00.408+01:00  INFO 1632 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T11:02:01.489+01:00  INFO 1632 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T11:02:02.295+01:00 DEBUG 1632 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-11T11:02:03.047+01:00  INFO 1632 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 9.612 seconds (process running for 11.537)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.32 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.721 s
+[INFO] Finished at: 2025-05-11T11:02:06+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-11 11:02:06 - Command failed after 2 attempts: mvn clean install
+2025-05-11 11:02:06 - Backend build failed.
+2025-05-11 11:02:06 - Backend startup failed. Exiting...
+2025-05-11 11:03:05 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+11:02:50.302 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:02:50.579 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-11T11:02:51.530+01:00  INFO 6120 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 6120 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-11T11:02:51.533+01:00  INFO 6120 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T11:02:52.947+01:00  INFO 6120 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T11:02:53.092+01:00  INFO 6120 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 4 JPA repository interfaces.
+2025-05-11T11:02:54.061+01:00  INFO 6120 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T11:02:54.220+01:00  INFO 6120 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-11T11:02:54.309+01:00  INFO 6120 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T11:02:55.045+01:00  INFO 6120 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T11:02:55.106+01:00  INFO 6120 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T11:02:56.081+01:00  INFO 6120 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1d7f2f0a
+2025-05-11T11:02:56.086+01:00  INFO 6120 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T11:02:56.165+01:00  WARN 6120 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-11T11:02:56.224+01:00  INFO 6120 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T11:02:58.229+01:00  INFO 6120 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T11:02:58.414+01:00  INFO 6120 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T11:02:59.770+01:00  INFO 6120 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T11:03:00.539+01:00 DEBUG 6120 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-11T11:03:01.403+01:00  INFO 6120 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 10.474 seconds (process running for 12.389)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.32 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.099 s
+[INFO] Finished at: 2025-05-11T11:03:04+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-11 11:03:47 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+11:03:23.133 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:03:23.286 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-11T11:03:24.155+01:00  INFO 21728 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 21728 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-11T11:03:24.160+01:00  INFO 21728 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T11:03:25.388+01:00  INFO 21728 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T11:03:25.533+01:00  INFO 21728 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 4 JPA repository interfaces.
+2025-05-11T11:03:26.506+01:00  INFO 21728 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T11:03:26.628+01:00  INFO 21728 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-11T11:03:26.717+01:00  INFO 21728 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T11:03:27.358+01:00  INFO 21728 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T11:03:27.434+01:00  INFO 21728 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T11:03:28.160+01:00  INFO 21728 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6248cfab
+2025-05-11T11:03:28.165+01:00  INFO 21728 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T11:03:28.227+01:00  WARN 21728 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-11T11:03:28.267+01:00  INFO 21728 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T11:03:29.882+01:00  INFO 21728 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T11:03:30.122+01:00  INFO 21728 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T11:03:32.391+01:00  INFO 21728 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T11:03:35.194+01:00 DEBUG 21728 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-11T11:03:38.893+01:00  INFO 21728 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 15.311 seconds (process running for 16.907)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.39 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  40.022 s
+[INFO] Finished at: 2025-05-11T11:03:47+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-11 11:04:25 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+11:04:03.010 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:04:03.192 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-11T11:04:04.029+01:00  INFO 6676 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 6676 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-11T11:04:04.032+01:00  INFO 6676 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T11:04:05.317+01:00  INFO 6676 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T11:04:05.449+01:00  INFO 6676 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 4 JPA repository interfaces.
+2025-05-11T11:04:06.335+01:00  INFO 6676 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T11:04:06.422+01:00  INFO 6676 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-11T11:04:06.478+01:00  INFO 6676 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T11:04:07.172+01:00  INFO 6676 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T11:04:07.230+01:00  INFO 6676 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T11:04:08.048+01:00  INFO 6676 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@296676c4
+2025-05-11T11:04:08.054+01:00  INFO 6676 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T11:04:08.131+01:00  WARN 6676 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-11T11:04:08.174+01:00  INFO 6676 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T11:04:09.753+01:00  INFO 6676 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T11:04:09.936+01:00  INFO 6676 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T11:04:11.714+01:00  INFO 6676 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T11:04:12.874+01:00 DEBUG 6676 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-11T11:04:17.461+01:00  INFO 6676 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 14.012 seconds (process running for 15.523)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.88 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  35.641 s
+[INFO] Finished at: 2025-05-11T11:04:25+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-11 11:04:25 - Command failed after 2 attempts: mvn clean install
+2025-05-11 11:04:25 - Backend build failed.
+2025-05-11 11:04:25 - Backend startup failed. Exiting...
+2025-05-11 11:09:45 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+11:09:31.800 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:09:31.986 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-11T11:09:32.811+01:00  INFO 19224 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 19224 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-11T11:09:32.813+01:00  INFO 19224 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T11:09:34.149+01:00  INFO 19224 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T11:09:34.276+01:00  INFO 19224 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 4 JPA repository interfaces.
+2025-05-11T11:09:35.220+01:00  INFO 19224 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T11:09:35.378+01:00  INFO 19224 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-11T11:09:35.446+01:00  INFO 19224 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T11:09:36.218+01:00  INFO 19224 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T11:09:36.279+01:00  INFO 19224 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T11:09:37.094+01:00  INFO 19224 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@70f85235
+2025-05-11T11:09:37.099+01:00  INFO 19224 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T11:09:37.191+01:00  WARN 19224 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-11T11:09:37.240+01:00  INFO 19224 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T11:09:39.208+01:00  INFO 19224 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T11:09:39.413+01:00  INFO 19224 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T11:09:40.514+01:00  INFO 19224 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T11:09:41.328+01:00 DEBUG 19224 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-11T11:09:42.085+01:00  INFO 19224 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 9.783 seconds (process running for 11.438)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.47 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.476 s
+[INFO] Finished at: 2025-05-11T11:09:45+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-11 11:09:54 - Backend is not accessible.
+2025-05-11 11:09:54 - Backend startup failed. Exiting...
+2025-05-11 11:30:36 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+11:30:21.518 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:30:21.630 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-11T11:30:22.265+01:00  INFO 12528 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 12528 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-11T11:30:22.267+01:00  INFO 12528 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T11:30:23.294+01:00  INFO 12528 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T11:30:23.389+01:00  INFO 12528 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 4 JPA repository interfaces.
+2025-05-11T11:30:24.231+01:00  INFO 12528 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T11:30:24.367+01:00  INFO 12528 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-11T11:30:24.445+01:00  INFO 12528 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T11:30:25.170+01:00  INFO 12528 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T11:30:25.228+01:00  INFO 12528 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T11:30:26.104+01:00  INFO 12528 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@278de2b2
+2025-05-11T11:30:26.111+01:00  INFO 12528 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T11:30:26.258+01:00  WARN 12528 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-11T11:30:26.339+01:00  INFO 12528 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T11:30:28.491+01:00  INFO 12528 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T11:30:28.696+01:00  INFO 12528 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T11:30:30.172+01:00  INFO 12528 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T11:30:31.411+01:00 DEBUG 12528 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-11T11:30:32.518+01:00  INFO 12528 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 10.613 seconds (process running for 11.808)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.78 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.064 s
+[INFO] Finished at: 2025-05-11T11:30:36+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-11 11:30:46 - Backend is not accessible.
+2025-05-11 11:30:46 - Backend startup failed. Exiting...
+2025-05-11 11:36:45 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+11:36:30.962 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:36:31.102 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-11T11:36:32.071+01:00  INFO 31604 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 31604 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-11T11:36:32.079+01:00  INFO 31604 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T11:36:33.476+01:00  INFO 31604 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T11:36:33.600+01:00  INFO 31604 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 4 JPA repository interfaces.
+2025-05-11T11:36:34.632+01:00  INFO 31604 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T11:36:34.845+01:00  INFO 31604 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-11T11:36:34.927+01:00  INFO 31604 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T11:36:35.662+01:00  INFO 31604 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T11:36:35.727+01:00  INFO 31604 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T11:36:36.649+01:00  INFO 31604 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@483b7dc4
+2025-05-11T11:36:36.652+01:00  INFO 31604 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T11:36:36.738+01:00  WARN 31604 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-11T11:36:36.815+01:00  INFO 31604 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T11:36:38.747+01:00  INFO 31604 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T11:36:38.948+01:00  INFO 31604 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T11:36:40.246+01:00  INFO 31604 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T11:36:41.401+01:00 DEBUG 31604 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-11T11:36:42.320+01:00  INFO 31604 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 10.77 seconds (process running for 12.444)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.58 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.724 s
+[INFO] Finished at: 2025-05-11T11:36:45+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-11 11:36:55 - Backend is not accessible.
+2025-05-11 11:36:55 - Backend startup failed. Exiting...
+2025-05-11 11:44:27 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+11:44:07.866 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:44:08.053 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-11T11:44:08.902+01:00  INFO 12944 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 12944 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-11T11:44:08.907+01:00  INFO 12944 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T11:44:10.453+01:00  INFO 12944 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T11:44:10.607+01:00  INFO 12944 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 4 JPA repository interfaces.
+2025-05-11T11:44:11.808+01:00  INFO 12944 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T11:44:12.004+01:00  INFO 12944 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-11T11:44:12.072+01:00  INFO 12944 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T11:44:12.915+01:00  INFO 12944 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T11:44:12.998+01:00  INFO 12944 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-11T11:44:13.899+01:00  INFO 12944 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1bfa3893
+2025-05-11T11:44:13.904+01:00  INFO 12944 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-11T11:44:13.996+01:00  WARN 12944 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-11T11:44:14.051+01:00  INFO 12944 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T11:44:16.165+01:00  INFO 12944 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T11:44:16.495+01:00  INFO 12944 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T11:44:18.258+01:00  INFO 12944 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-11T11:44:19.288+01:00 DEBUG 12944 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-11T11:44:20.416+01:00  INFO 12944 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 12.044 seconds (process running for 13.631)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.90 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  30.787 s
+[INFO] Finished at: 2025-05-11T11:44:27+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-11 11:44:37 - Backend is not accessible.
+2025-05-11 11:44:37 - Backend startup failed. Exiting...
+2025-05-12 07:37:25 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+07:37:10.714 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:37:10.904 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-12T07:37:11.793+01:00  INFO 18852 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 18852 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-12T07:37:11.796+01:00  INFO 18852 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-12T07:37:13.181+01:00  INFO 18852 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-12T07:37:13.333+01:00  INFO 18852 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 4 JPA repository interfaces.
+2025-05-12T07:37:14.435+01:00  INFO 18852 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-12T07:37:14.595+01:00  INFO 18852 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-12T07:37:14.707+01:00  INFO 18852 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-12T07:37:15.406+01:00  INFO 18852 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-12T07:37:15.474+01:00  INFO 18852 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-12T07:37:16.430+01:00  INFO 18852 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5f3f3d00
+2025-05-12T07:37:16.435+01:00  INFO 18852 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-12T07:37:16.551+01:00  WARN 18852 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-12T07:37:16.606+01:00  INFO 18852 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-12T07:37:18.553+01:00  INFO 18852 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-12T07:37:18.794+01:00  INFO 18852 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-12T07:37:19.970+01:00  INFO 18852 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-12T07:37:20.742+01:00 DEBUG 18852 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-12T07:37:21.537+01:00  INFO 18852 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 10.31 seconds (process running for 12.085)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.12 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.202 s
+[INFO] Finished at: 2025-05-12T07:37:25+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-12 07:37:34 - Backend is not accessible.
+2025-05-12 07:37:34 - Backend startup failed. Exiting...
+2025-05-12 07:57:46 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+07:57:32.271 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:57:32.438 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-12T07:57:33.333+01:00  INFO 29740 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 29740 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-12T07:57:33.337+01:00  INFO 29740 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-12T07:57:34.695+01:00  INFO 29740 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-12T07:57:34.838+01:00  INFO 29740 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 4 JPA repository interfaces.
+2025-05-12T07:57:35.864+01:00  INFO 29740 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-12T07:57:36.006+01:00  INFO 29740 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-12T07:57:36.087+01:00  INFO 29740 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-12T07:57:36.821+01:00  INFO 29740 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-12T07:57:36.915+01:00  INFO 29740 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-12T07:57:37.803+01:00  INFO 29740 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7ce30c0b
+2025-05-12T07:57:37.808+01:00  INFO 29740 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-12T07:57:37.891+01:00  WARN 29740 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-12T07:57:37.950+01:00  INFO 29740 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-12T07:57:39.801+01:00  INFO 29740 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-12T07:57:39.996+01:00  INFO 29740 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-12T07:57:41.081+01:00  INFO 29740 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-12T07:57:41.876+01:00 DEBUG 29740 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-12T07:57:42.652+01:00  INFO 29740 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 9.841 seconds (process running for 11.586)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.56 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.476 s
+[INFO] Finished at: 2025-05-12T07:57:46+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-12 07:57:55 - Backend is not accessible.
+2025-05-12 07:57:55 - Backend startup failed. Exiting...
+2025-05-12 08:07:55 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+08:07:42.405 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:07:42.578 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-12T08:07:43.366+01:00  INFO 6128 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 6128 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-12T08:07:43.371+01:00  INFO 6128 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-12T08:07:44.689+01:00  INFO 6128 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-12T08:07:44.840+01:00  INFO 6128 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 4 JPA repository interfaces.
+2025-05-12T08:07:45.790+01:00  INFO 6128 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-12T08:07:45.969+01:00  INFO 6128 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-12T08:07:46.051+01:00  INFO 6128 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-12T08:07:46.768+01:00  INFO 6128 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-12T08:07:46.839+01:00  INFO 6128 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-12T08:07:47.552+01:00  INFO 6128 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75cacb3e
+2025-05-12T08:07:47.556+01:00  INFO 6128 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-12T08:07:47.630+01:00  WARN 6128 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-12T08:07:47.678+01:00  INFO 6128 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-12T08:07:49.669+01:00  INFO 6128 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-12T08:07:49.859+01:00  INFO 6128 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-12T08:07:50.872+01:00  INFO 6128 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-12T08:07:51.548+01:00 DEBUG 6128 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-12T08:07:52.259+01:00  INFO 6128 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 9.371 seconds (process running for 11.097)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.01 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.546 s
+[INFO] Finished at: 2025-05-12T08:07:55+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+2025-05-12 08:08:04 - Backend is not accessible.
+2025-05-12 08:08:04 - Backend startup failed. Exiting...
+2025-05-12 08:57:14 - [INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:mvc >---------------------------
+[INFO] Building mvc 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ mvc ---
+[INFO] Deleting C:\Users\suri2\mvc\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mvc ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mvc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: C:\Users\suri2\mvc\src\main\java\com\example\mvc\service\JwtTokenProvider.java uses or overrides a deprecated API.
+[INFO] /C:/Users/suri2/mvc/src/main/java/com/example/mvc/service/JwtTokenProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mvc ---
+[INFO] skip non existing resourceDirectory C:\Users\suri2\mvc\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mvc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ mvc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.mvc.MvcApplicationTests
+08:56:57.566 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.mvc.MvcApplicationTests]: MvcApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:56:57.736 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.mvc.MvcApplication for test class com.example.mvc.MvcApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-05-12T08:56:58.703+01:00  INFO 23792 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Starting MvcApplicationTests using Java 17.0.12 with PID 23792 (started by suri2 in C:\Users\suri2\mvc)
+2025-05-12T08:56:58.705+01:00  INFO 23792 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-05-12T08:57:00.057+01:00  INFO 23792 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-12T08:57:00.222+01:00  INFO 23792 --- [mvc] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 141 ms. Found 4 JPA repository interfaces.
+2025-05-12T08:57:01.205+01:00  INFO 23792 --- [mvc] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-12T08:57:01.466+01:00  INFO 23792 --- [mvc] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-12T08:57:01.564+01:00  INFO 23792 --- [mvc] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-12T08:57:02.410+01:00  INFO 23792 --- [mvc] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-12T08:57:02.473+01:00  INFO 23792 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-12T08:57:03.156+01:00  INFO 23792 --- [mvc] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@483b7dc4
+2025-05-12T08:57:03.159+01:00  INFO 23792 --- [mvc] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-12T08:57:03.224+01:00  WARN 23792 --- [mvc] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-12T08:57:03.257+01:00  INFO 23792 --- [mvc] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-12T08:57:05.618+01:00  INFO 23792 --- [mvc] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-12T08:57:05.756+01:00  INFO 23792 --- [mvc] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-12T08:57:06.742+01:00  INFO 23792 --- [mvc] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-12T08:57:07.769+01:00 DEBUG 23792 --- [mvc] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, CustomJwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-12T08:57:08.896+01:00  INFO 23792 --- [mvc] [           main] com.example.mvc.MvcApplicationTests      : Started MvcApplicationTests in 10.844 seconds (process running for 12.399)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.78 s -- in com.example.mvc.MvcApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ mvc ---
+[INFO] Building jar: C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.0:repackage (repackage) @ mvc ---
+[INFO] Replacing main artifact C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.3:install (default-install) @ mvc ---
+[INFO] Installing C:\Users\suri2\mvc\pom.xml to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\suri2\mvc\target\mvc-0.0.1-SNAPSHOT.jar to C:\Users\suri2\.m2\repository\com\example\mvc\0.0.1-SNAPSHOT\mvc-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.268 s
+[INFO] Finished at: 2025-05-12T08:57:14+01:00
+[INFO] ------------------------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+

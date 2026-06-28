@@ -9,6 +9,7 @@ import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -32,6 +33,15 @@ public class UserService {
     public List<User> searchUsers(String query) {
 
         return userRepository.findByUsernameContainingIgnoreCase(query);
+    }
+
+    public List<User> searchSuggestions(String keyword)
+    {
+        if(keyword==null || keyword.trim().length()<2)
+        {
+            return Collections.emptyList();
+        }
+        return userRepository.findTop5ByUsernameStartingWithIgnoreCase(keyword);
     }
 
     // Get user by ID

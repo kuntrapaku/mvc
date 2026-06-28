@@ -1,0 +1,1002 @@
+[
+    {
+        "id":1,
+        "title":"Role Title 1",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 1. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 1 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emily Smith",
+        "contact":"emily.smith@example.com",
+        "location":"Mumbai, India",
+        "industry":"HFI"
+    },
+    {
+        "id":2,
+        "title":"Role Title 2",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 2. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 2 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Michael Johnson",
+        "contact":"michael.johnson@example.com",
+        "location":"London, UK",
+        "industry":"KFI"
+    },
+    {
+        "id":3,
+        "title":"Role Title 3",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 3. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 3 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Samantha Lee",
+        "contact":"samantha.lee@example.com",
+        "location":"Hyderabad, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":4,
+        "title":"Role Title 4",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 4. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 4 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Robert Brown",
+        "contact":"robert.brown@example.com",
+        "location":"Chennai, India",
+        "industry":"TFI"
+    },
+    {
+        "id":5,
+        "title":"Role Title 5",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 5. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 5 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Laura Wilson",
+        "contact":"laura.wilson@example.com",
+        "location":"New York, USA",
+        "industry":"HFI"
+    },
+    {
+        "id":6,
+        "title":"Role Title 6",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 6. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 6 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Daniel Martinez",
+        "contact":"daniel.martinez@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"KFI"
+    },
+    {
+        "id":7,
+        "title":"Role Title 7",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 7. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 7 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Sarah Johnson",
+        "contact":"sarah.johnson@example.com",
+        "location":"Mumbai, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":8,
+        "title":"Role Title 8",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 8. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 8 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Anthony Green",
+        "contact":"anthony.green@example.com",
+        "location":"London, UK",
+        "industry":"TFI"
+    },
+    {
+        "id":9,
+        "title":"Role Title 9",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 9. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 9 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emma Davis",
+        "contact":"emma.davis@example.com",
+        "location":"Hyderabad, India",
+        "industry":"HFI"
+    },
+    {
+        "id":10,
+        "title":"Role Title 10",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 10. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 10 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"John Doe",
+        "contact":"john.doe@example.com",
+        "location":"Chennai, India",
+        "industry":"KFI"
+    },
+    {
+        "id":11,
+        "title":"Role Title 11",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 11. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 11 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emily Smith",
+        "contact":"emily.smith@example.com",
+        "location":"New York, USA",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":12,
+        "title":"Role Title 12",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 12. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 12 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Michael Johnson",
+        "contact":"michael.johnson@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"TFI"
+    },
+    {
+        "id":13,
+        "title":"Role Title 13",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 13. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 13 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Samantha Lee",
+        "contact":"samantha.lee@example.com",
+        "location":"Mumbai, India",
+        "industry":"HFI"
+    },
+    {
+        "id":14,
+        "title":"Role Title 14",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 14. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 14 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Robert Brown",
+        "contact":"robert.brown@example.com",
+        "location":"London, UK",
+        "industry":"KFI"
+    },
+    {
+        "id":15,
+        "title":"Role Title 15",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 15. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 15 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Laura Wilson",
+        "contact":"laura.wilson@example.com",
+        "location":"Hyderabad, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":16,
+        "title":"Role Title 16",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 16. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 16 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Daniel Martinez",
+        "contact":"daniel.martinez@example.com",
+        "location":"Chennai, India",
+        "industry":"TFI"
+    },
+    {
+        "id":17,
+        "title":"Role Title 17",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 17. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 17 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Sarah Johnson",
+        "contact":"sarah.johnson@example.com",
+        "location":"New York, USA",
+        "industry":"HFI"
+    },
+    {
+        "id":18,
+        "title":"Role Title 18",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 18. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 18 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Anthony Green",
+        "contact":"anthony.green@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"KFI"
+    },
+    {
+        "id":19,
+        "title":"Role Title 19",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 19. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 19 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emma Davis",
+        "contact":"emma.davis@example.com",
+        "location":"Mumbai, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":20,
+        "title":"Role Title 20",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 20. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 20 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"John Doe",
+        "contact":"john.doe@example.com",
+        "location":"London, UK",
+        "industry":"TFI"
+    },
+    {
+        "id":21,
+        "title":"Role Title 21",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 21. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 21 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emily Smith",
+        "contact":"emily.smith@example.com",
+        "location":"Hyderabad, India",
+        "industry":"HFI"
+    },
+    {
+        "id":22,
+        "title":"Role Title 22",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 22. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 22 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Michael Johnson",
+        "contact":"michael.johnson@example.com",
+        "location":"Chennai, India",
+        "industry":"KFI"
+    },
+    {
+        "id":23,
+        "title":"Role Title 23",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 23. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 23 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Samantha Lee",
+        "contact":"samantha.lee@example.com",
+        "location":"New York, USA",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":24,
+        "title":"Role Title 24",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 24. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 24 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Robert Brown",
+        "contact":"robert.brown@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"TFI"
+    },
+    {
+        "id":25,
+        "title":"Role Title 25",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 25. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 25 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Laura Wilson",
+        "contact":"laura.wilson@example.com",
+        "location":"Mumbai, India",
+        "industry":"HFI"
+    },
+    {
+        "id":26,
+        "title":"Role Title 26",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 26. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 26 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Daniel Martinez",
+        "contact":"daniel.martinez@example.com",
+        "location":"London, UK",
+        "industry":"KFI"
+    },
+    {
+        "id":27,
+        "title":"Role Title 27",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 27. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 27 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Sarah Johnson",
+        "contact":"sarah.johnson@example.com",
+        "location":"Hyderabad, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":28,
+        "title":"Role Title 28",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 28. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 28 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Anthony Green",
+        "contact":"anthony.green@example.com",
+        "location":"Chennai, India",
+        "industry":"TFI"
+    },
+    {
+        "id":29,
+        "title":"Role Title 29",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 29. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 29 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emma Davis",
+        "contact":"emma.davis@example.com",
+        "location":"New York, USA",
+        "industry":"HFI"
+    },
+    {
+        "id":30,
+        "title":"Role Title 30",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 30. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 30 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"John Doe",
+        "contact":"john.doe@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"KFI"
+    },
+    {
+        "id":31,
+        "title":"Role Title 31",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 31. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 31 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emily Smith",
+        "contact":"emily.smith@example.com",
+        "location":"Mumbai, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":32,
+        "title":"Role Title 32",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 32. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 32 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Michael Johnson",
+        "contact":"michael.johnson@example.com",
+        "location":"London, UK",
+        "industry":"TFI"
+    },
+    {
+        "id":33,
+        "title":"Role Title 33",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 33. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 33 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Samantha Lee",
+        "contact":"samantha.lee@example.com",
+        "location":"Hyderabad, India",
+        "industry":"HFI"
+    },
+    {
+        "id":34,
+        "title":"Role Title 34",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 34. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 34 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Robert Brown",
+        "contact":"robert.brown@example.com",
+        "location":"Chennai, India",
+        "industry":"KFI"
+    },
+    {
+        "id":35,
+        "title":"Role Title 35",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 35. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 35 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Laura Wilson",
+        "contact":"laura.wilson@example.com",
+        "location":"New York, USA",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":36,
+        "title":"Role Title 36",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 36. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 36 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Daniel Martinez",
+        "contact":"daniel.martinez@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"TFI"
+    },
+    {
+        "id":37,
+        "title":"Role Title 37",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 37. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 37 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Sarah Johnson",
+        "contact":"sarah.johnson@example.com",
+        "location":"Mumbai, India",
+        "industry":"HFI"
+    },
+    {
+        "id":38,
+        "title":"Role Title 38",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 38. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 38 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Anthony Green",
+        "contact":"anthony.green@example.com",
+        "location":"London, UK",
+        "industry":"KFI"
+    },
+    {
+        "id":39,
+        "title":"Role Title 39",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 39. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 39 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emma Davis",
+        "contact":"emma.davis@example.com",
+        "location":"Hyderabad, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":40,
+        "title":"Role Title 40",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 40. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 40 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"John Doe",
+        "contact":"john.doe@example.com",
+        "location":"Chennai, India",
+        "industry":"TFI"
+    },
+    {
+        "id":41,
+        "title":"Role Title 41",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 41. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 41 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emily Smith",
+        "contact":"emily.smith@example.com",
+        "location":"New York, USA",
+        "industry":"HFI"
+    },
+    {
+        "id":42,
+        "title":"Role Title 42",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 42. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 42 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Michael Johnson",
+        "contact":"michael.johnson@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"KFI"
+    },
+    {
+        "id":43,
+        "title":"Role Title 43",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 43. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 43 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Samantha Lee",
+        "contact":"samantha.lee@example.com",
+        "location":"Mumbai, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":44,
+        "title":"Role Title 44",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 44. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 44 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Robert Brown",
+        "contact":"robert.brown@example.com",
+        "location":"London, UK",
+        "industry":"TFI"
+    },
+    {
+        "id":45,
+        "title":"Role Title 45",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 45. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 45 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Laura Wilson",
+        "contact":"laura.wilson@example.com",
+        "location":"Hyderabad, India",
+        "industry":"HFI"
+    },
+    {
+        "id":46,
+        "title":"Role Title 46",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 46. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 46 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Daniel Martinez",
+        "contact":"daniel.martinez@example.com",
+        "location":"Chennai, India",
+        "industry":"KFI"
+    },
+    {
+        "id":47,
+        "title":"Role Title 47",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 47. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 47 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Sarah Johnson",
+        "contact":"sarah.johnson@example.com",
+        "location":"New York, USA",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":48,
+        "title":"Role Title 48",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 48. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 48 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Anthony Green",
+        "contact":"anthony.green@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"TFI"
+    },
+    {
+        "id":49,
+        "title":"Role Title 49",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 49. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 49 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emma Davis",
+        "contact":"emma.davis@example.com",
+        "location":"Mumbai, India",
+        "industry":"HFI"
+    },
+    {
+        "id":50,
+        "title":"Role Title 50",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 50. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 50 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"John Doe",
+        "contact":"john.doe@example.com",
+        "location":"London, UK",
+        "industry":"KFI"
+    },
+    {
+        "id":51,
+        "title":"Role Title 51",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 51. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 51 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emily Smith",
+        "contact":"emily.smith@example.com",
+        "location":"Hyderabad, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":52,
+        "title":"Role Title 52",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 52. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 52 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Michael Johnson",
+        "contact":"michael.johnson@example.com",
+        "location":"Chennai, India",
+        "industry":"TFI"
+    },
+    {
+        "id":53,
+        "title":"Role Title 53",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 53. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 53 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Samantha Lee",
+        "contact":"samantha.lee@example.com",
+        "location":"New York, USA",
+        "industry":"HFI"
+    },
+    {
+        "id":54,
+        "title":"Role Title 54",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 54. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 54 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Robert Brown",
+        "contact":"robert.brown@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"KFI"
+    },
+    {
+        "id":55,
+        "title":"Role Title 55",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 55. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 55 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Laura Wilson",
+        "contact":"laura.wilson@example.com",
+        "location":"Mumbai, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":56,
+        "title":"Role Title 56",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 56. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 56 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Daniel Martinez",
+        "contact":"daniel.martinez@example.com",
+        "location":"London, UK",
+        "industry":"TFI"
+    },
+    {
+        "id":57,
+        "title":"Role Title 57",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 57. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 57 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Sarah Johnson",
+        "contact":"sarah.johnson@example.com",
+        "location":"Hyderabad, India",
+        "industry":"HFI"
+    },
+    {
+        "id":58,
+        "title":"Role Title 58",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 58. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 58 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Anthony Green",
+        "contact":"anthony.green@example.com",
+        "location":"Chennai, India",
+        "industry":"KFI"
+    },
+    {
+        "id":59,
+        "title":"Role Title 59",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 59. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 59 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emma Davis",
+        "contact":"emma.davis@example.com",
+        "location":"New York, USA",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":60,
+        "title":"Role Title 60",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 60. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 60 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"John Doe",
+        "contact":"john.doe@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"TFI"
+    },
+    {
+        "id":61,
+        "title":"Role Title 61",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 61. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 61 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emily Smith",
+        "contact":"emily.smith@example.com",
+        "location":"Mumbai, India",
+        "industry":"HFI"
+    },
+    {
+        "id":62,
+        "title":"Role Title 62",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 62. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 62 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Michael Johnson",
+        "contact":"michael.johnson@example.com",
+        "location":"London, UK",
+        "industry":"KFI"
+    },
+    {
+        "id":63,
+        "title":"Role Title 63",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 63. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 63 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Samantha Lee",
+        "contact":"samantha.lee@example.com",
+        "location":"Hyderabad, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":64,
+        "title":"Role Title 64",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 64. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 64 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Robert Brown",
+        "contact":"robert.brown@example.com",
+        "location":"Chennai, India",
+        "industry":"TFI"
+    },
+    {
+        "id":65,
+        "title":"Role Title 65",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 65. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 65 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Laura Wilson",
+        "contact":"laura.wilson@example.com",
+        "location":"New York, USA",
+        "industry":"HFI"
+    },
+    {
+        "id":66,
+        "title":"Role Title 66",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 66. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 66 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Daniel Martinez",
+        "contact":"daniel.martinez@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"KFI"
+    },
+    {
+        "id":67,
+        "title":"Role Title 67",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 67. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 67 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Sarah Johnson",
+        "contact":"sarah.johnson@example.com",
+        "location":"Mumbai, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":68,
+        "title":"Role Title 68",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 68. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 68 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Anthony Green",
+        "contact":"anthony.green@example.com",
+        "location":"London, UK",
+        "industry":"TFI"
+    },
+    {
+        "id":69,
+        "title":"Role Title 69",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 69. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 69 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emma Davis",
+        "contact":"emma.davis@example.com",
+        "location":"Hyderabad, India",
+        "industry":"HFI"
+    },
+    {
+        "id":70,
+        "title":"Role Title 70",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 70. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 70 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"John Doe",
+        "contact":"john.doe@example.com",
+        "location":"Chennai, India",
+        "industry":"KFI"
+    },
+    {
+        "id":71,
+        "title":"Role Title 71",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 71. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 71 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emily Smith",
+        "contact":"emily.smith@example.com",
+        "location":"New York, USA",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":72,
+        "title":"Role Title 72",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 72. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 72 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Michael Johnson",
+        "contact":"michael.johnson@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"TFI"
+    },
+    {
+        "id":73,
+        "title":"Role Title 73",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 73. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 73 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Samantha Lee",
+        "contact":"samantha.lee@example.com",
+        "location":"Mumbai, India",
+        "industry":"HFI"
+    },
+    {
+        "id":74,
+        "title":"Role Title 74",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 74. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 74 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Robert Brown",
+        "contact":"robert.brown@example.com",
+        "location":"London, UK",
+        "industry":"KFI"
+    },
+    {
+        "id":75,
+        "title":"Role Title 75",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 75. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 75 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Laura Wilson",
+        "contact":"laura.wilson@example.com",
+        "location":"Hyderabad, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":76,
+        "title":"Role Title 76",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 76. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 76 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Daniel Martinez",
+        "contact":"daniel.martinez@example.com",
+        "location":"Chennai, India",
+        "industry":"TFI"
+    },
+    {
+        "id":77,
+        "title":"Role Title 77",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 77. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 77 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Sarah Johnson",
+        "contact":"sarah.johnson@example.com",
+        "location":"New York, USA",
+        "industry":"HFI"
+    },
+    {
+        "id":78,
+        "title":"Role Title 78",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 78. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 78 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Anthony Green",
+        "contact":"anthony.green@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"KFI"
+    },
+    {
+        "id":79,
+        "title":"Role Title 79",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 79. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 79 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emma Davis",
+        "contact":"emma.davis@example.com",
+        "location":"Mumbai, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":80,
+        "title":"Role Title 80",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 80. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 80 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"John Doe",
+        "contact":"john.doe@example.com",
+        "location":"London, UK",
+        "industry":"TFI"
+    },
+    {
+        "id":81,
+        "title":"Role Title 81",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 81. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 81 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emily Smith",
+        "contact":"emily.smith@example.com",
+        "location":"Hyderabad, India",
+        "industry":"HFI"
+    },
+    {
+        "id":82,
+        "title":"Role Title 82",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 82. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 82 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Michael Johnson",
+        "contact":"michael.johnson@example.com",
+        "location":"Chennai, India",
+        "industry":"KFI"
+    },
+    {
+        "id":83,
+        "title":"Role Title 83",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 83. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 83 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Samantha Lee",
+        "contact":"samantha.lee@example.com",
+        "location":"New York, USA",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":84,
+        "title":"Role Title 84",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 84. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 84 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Robert Brown",
+        "contact":"robert.brown@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"TFI"
+    },
+    {
+        "id":85,
+        "title":"Role Title 85",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 85. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 85 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Laura Wilson",
+        "contact":"laura.wilson@example.com",
+        "location":"Mumbai, India",
+        "industry":"HFI"
+    },
+    {
+        "id":86,
+        "title":"Role Title 86",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 86. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 86 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Daniel Martinez",
+        "contact":"daniel.martinez@example.com",
+        "location":"London, UK",
+        "industry":"KFI"
+    },
+    {
+        "id":87,
+        "title":"Role Title 87",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 87. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 87 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Sarah Johnson",
+        "contact":"sarah.johnson@example.com",
+        "location":"Hyderabad, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":88,
+        "title":"Role Title 88",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 88. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 88 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Anthony Green",
+        "contact":"anthony.green@example.com",
+        "location":"Chennai, India",
+        "industry":"TFI"
+    },
+    {
+        "id":89,
+        "title":"Role Title 89",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 89. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 89 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emma Davis",
+        "contact":"emma.davis@example.com",
+        "location":"New York, USA",
+        "industry":"HFI"
+    },
+    {
+        "id":90,
+        "title":"Role Title 90",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 90. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 90 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"John Doe",
+        "contact":"john.doe@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"KFI"
+    },
+    {
+        "id":91,
+        "title":"Role Title 91",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 91. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 91 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emily Smith",
+        "contact":"emily.smith@example.com",
+        "location":"Mumbai, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":92,
+        "title":"Role Title 92",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 92. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 92 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Michael Johnson",
+        "contact":"michael.johnson@example.com",
+        "location":"London, UK",
+        "industry":"TFI"
+    },
+    {
+        "id":93,
+        "title":"Role Title 93",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 93. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 93 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Samantha Lee",
+        "contact":"samantha.lee@example.com",
+        "location":"Hyderabad, India",
+        "industry":"HFI"
+    },
+    {
+        "id":94,
+        "title":"Role Title 94",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 94. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 94 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Robert Brown",
+        "contact":"robert.brown@example.com",
+        "location":"Chennai, India",
+        "industry":"KFI"
+    },
+    {
+        "id":95,
+        "title":"Role Title 95",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 95. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 95 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Laura Wilson",
+        "contact":"laura.wilson@example.com",
+        "location":"New York, USA",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":96,
+        "title":"Role Title 96",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 96. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 96 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Daniel Martinez",
+        "contact":"daniel.martinez@example.com",
+        "location":"Los Angeles, CA, USA",
+        "industry":"TFI"
+    },
+    {
+        "id":97,
+        "title":"Role Title 97",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 97. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 97 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Sarah Johnson",
+        "contact":"sarah.johnson@example.com",
+        "location":"Mumbai, India",
+        "industry":"HFI"
+    },
+    {
+        "id":98,
+        "title":"Role Title 98",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 98. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 98 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Anthony Green",
+        "contact":"anthony.green@example.com",
+        "location":"London, UK",
+        "industry":"KFI"
+    },
+    {
+        "id":99,
+        "title":"Role Title 99",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 99. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 99 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"Emma Davis",
+        "contact":"emma.davis@example.com",
+        "location":"Hyderabad, India",
+        "industry":"ENGLISH"
+    },
+    {
+        "id":100,
+        "title":"Role Title 100",
+        "description":"This is a detailed description of the responsibilities and tasks for Role Title 100. They oversee various tasks to ensure the smooth functioning of the respective department.",
+        "duties":"Duties for Role Title 100 include managing key operations, ensuring team collaboration, and reporting progress to stakeholders.",
+        "name":"John Doe",
+        "contact":"john.doe@example.com",
+        "location":"Chennai, India",
+        "industry":"TFI"
+    }
+]

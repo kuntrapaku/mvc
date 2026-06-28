@@ -51,6 +51,7 @@ public class AuthService {
         // Encrypt the user's password
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
+
         // Save the user to the database
         userRepository.save(user);
 

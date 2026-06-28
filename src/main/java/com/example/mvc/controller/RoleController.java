@@ -9,10 +9,7 @@ import com.example.mvc.model.Post;
 import com.example.mvc.model.Role;
 import com.example.mvc.model.User;
 import com.example.mvc.repository.ConnectionRequestRepository;
-import com.example.mvc.service.AuthService;
-import com.example.mvc.service.PostService;
-import com.example.mvc.service.RoleService;
-import com.example.mvc.service.UserService;
+import com.example.mvc.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 @RestController
@@ -34,6 +32,9 @@ public class RoleController {
 
     @Autowired
     private AuthService authService;
+
+    @Autowired
+    private AIClientService aiClientService;
 
     @Autowired
     private PostService postService; // Inject PostService
@@ -118,6 +119,7 @@ public class RoleController {
         }
     }
 
+
     // Login user and return token
     @PostMapping("/auth/login")
     public ResponseEntity<?> loginUser(@RequestBody User loginRequest) {
@@ -167,9 +169,19 @@ public class RoleController {
                 .map(user -> new UserDTO(user.getId(), user.getUsername(), user.getFullName(), user.getProfilePictureUrl()))
                 .collect(Collectors.toList());
 
+
+
         return ResponseEntity.ok(userDTOs);
     }
 
+    @GetMapping ("/suggest")
+    public List suggestUsers(String keyword)
+    {
+        List<User> users = userService.searchUsers(keyword);
+        return userService.searchSuggestions(keyword);
+
+
+    }
 
     // Get user by ID
     @GetMapping("/users/{id}")
